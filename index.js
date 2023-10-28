@@ -1,7 +1,6 @@
 'use strict';
  
 const express = require('express');
-const votes1 = require('./users1.json');
  
 // Constants
 const PORT = 8080;
@@ -16,16 +15,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/users/:userId', (req, res) => {
+    console.log(`Received GET request for /users/:userId`);
     res.send(require(`./users${req.params.userId}.json`));
 });
 
 app.post('/users', (req, res) => {
-  console.log(req.body);
+  console.log(`Received POST request for /users`);
   const user = req.body;
   user.userId = 1;
   res.send(user);
 });
- 
+
 app.listen(PORT, HOST, () => {
   console.log(`Running on http://${HOST}:${PORT}`);
 });

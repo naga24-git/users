@@ -1,7 +1,7 @@
 {
-  "name": "nag-voting",
+  "name": "nag-users",
   "version": "1.0.0",
-  "description": "Voting project for microcredentials",
+  "description": "Project for microcredentials",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
